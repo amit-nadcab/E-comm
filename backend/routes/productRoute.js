@@ -14,3 +14,4 @@ router.put("/product/update/:id", updateProduct);
 router.delete("/product/update/:id", deleteProduct);
 router.get("/product/update/:id", getProductDetails);
 module.exports = router;
+ 

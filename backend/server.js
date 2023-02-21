@@ -5,7 +5,7 @@ const app = express();
 const errorMiddleware = require("./middlewares/error");
 const { connectDB } = require("./config/dbConnection");
 app.use(express.json());
-app.use(errorMiddleware);
+
 
 const product = require("./routes/productRoute");
 
@@ -14,3 +14,5 @@ connectDB();
 app.listen(process.env.PORT, () => {
   console.log("App is running", process.env.PORT);
 });
+
+app.use(errorMiddleware);
